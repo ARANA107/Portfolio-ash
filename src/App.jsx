@@ -8,6 +8,7 @@ import { MainAnimation } from "./animation/MainAnimation";
 import { mainHeading } from "./constants.jsx";
 import CustomCursor from "./CustomCursor/CustomCursor";
 import CustomizedTimeline from "./TimeLine/CustomizedTimeline";
+
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isCursorVisible, setIsCursorVisible] = useState(true);
@@ -24,11 +25,12 @@ function App() {
         setCursorPosition={setCursorPosition}
         cursorPosition={cursorPosition}
       />
-      <Row>
+      <Row className="flex-column-reverse flex-md-row">
         <Col
-          xs={6}
+          xs={12}
+          md={6}
           style={{ paddingLeft: "40px", marginBottom: "40px" }}
-          className="justify-content-xs-center"
+          className="justify-content-xs-center text-center text-md-start"
         >
           <p className="white-text ">Hey there!</p>
           <h1
@@ -41,17 +43,23 @@ function App() {
           >
             {mainHeading}
           </h1>
-          <div style={{ display: "flex" }}>
-            <div class="blinking-circle" />
-            <p className="white-text">Available to connect (NY, USA)</p>
+          <div className="d-flex justify-content-center justify-content-md-start">
+            <div className="blinking-circle" style={{ marginRight: "10px" }} />
+            <p className="white-text" style={{ margin: "0" }}>
+              Available to connect (NY, USA)
+            </p>
           </div>
         </Col>
-        <Col xs={6} className="white-text d-flex justify-content-center">
+        <Col
+          xs={12}
+          md={6}
+          className="white-text d-flex justify-content-center mb-4"
+        >
           <MainAnimation />
         </Col>
       </Row>
       <Row className="g-0">
-        <Col xs={4} className="white-text">
+        <Col xs={12} md={4} className="white-text">
           <div className="timeline-container">
             <h2 className="timeline-title">
               Experience <span className="years">(07 Years)</span>
@@ -59,7 +67,11 @@ function App() {
             <CustomizedTimeline />
           </div>
         </Col>
-        <Col xs={4} className="d-flex justify-content-center">
+        <Col
+          xs={12}
+          md={4}
+          className="d-flex justify-content-center mt-4 mt-md-0"
+        >
           <Row style={{ width: "100%" }}>
             <Col
               xs={12}
@@ -81,6 +93,7 @@ function App() {
                     width: "100%",
                     display: "flex",
                     justifyContent: "space-around",
+                    flexWrap: "wrap",
                   }}
                 >
                   <img
@@ -104,33 +117,43 @@ function App() {
             </Col>
           </Row>
         </Col>
-        <Col className="d-flex justify-content-center">
+        <Col xs={12} md={4} className="mt-4 mt-md-0">
           <div className="timeline-container">
-            <div style={{ display: "flex" }}>
-              <h2 className="timeline-title">Lets connect</h2>
-              <img src="profile.png" className="profile" />
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <h2 className="timeline-title">Let's connect</h2>
+              <img
+                src="profile.png"
+                className="profile"
+                alt="profile"
+                style={{ marginLeft: "10px" }}
+              />
             </div>
 
             <Row>
-              <Col xs={12}>
-                <div style={{ display: "flex" }}>
-                  <img className="connectLogo" src="linkedin.png" alt="figma" />
+              <Col xs={12} className="mt-3">
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    className="connectLogo"
+                    src="linkedin.png"
+                    alt="linkedin"
+                  />
                   <a
                     href="https://www.linkedin.com/in/ashrana1993/"
                     target="_blank"
-                    style={{ marginTop: "3%" }}
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: "10px" }}
                     className="white-text connectLogoText"
                   >
                     LinkedIn Profile
                   </a>
                 </div>
               </Col>
-              <Col xs={12}>
-                <div style={{ display: "flex" }}>
+              <Col xs={12} className="mt-3">
+                <div style={{ display: "flex", alignItems: "center" }}>
                   <img className="connectLogo" src="gmail.png" alt="gmail" />
                   <a
                     href="mailto:ashrana1993@gmail.com"
-                    style={{ marginTop: "3%" }}
+                    style={{ marginLeft: "10px" }}
                     className="white-text connectLogoText"
                   >
                     Gmail
