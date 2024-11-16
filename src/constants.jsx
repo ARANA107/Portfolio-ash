@@ -1,5 +1,5 @@
 export const mainHeading =
-  "I'm Ash, a Full stack developer crafting user-centric design with pixel-perfect precision.";
+  "I'm Ash, a full-stack developer crafting elegant front-end with scalable backend technology.";
 
 export const companies = [
   {

@@ -41,7 +41,10 @@ function App() {
           >
             {mainHeading}
           </h1>
-          <p className="white-text">Available to connect (NY, USA)</p>
+          <div style={{ display: "flex" }}>
+            <div class="blinking-circle" />
+            <p className="white-text">Available to connect (NY, USA)</p>
+          </div>
         </Col>
         <Col xs={6} className="white-text d-flex justify-content-center">
           <MainAnimation />
@@ -74,6 +77,7 @@ function App() {
                 <h2 className="timeline-title">Tech stack</h2>
                 <div
                   style={{
+                    marginTop: "20px",
                     width: "100%",
                     display: "flex",
                     justifyContent: "space-around",
@@ -86,13 +90,13 @@ function App() {
                   />
                   <img
                     className="tech-skills-logo"
-                    src="spring.jpg"
+                    src="spring.png"
                     alt="spring"
                   />
-                  <img className="tech-skills-logo" src="sql.jpg" alt="sql" />
+                  <img className="tech-skills-logo" src="dbs.png" alt="sql" />
                   <img
                     className="tech-skills-logo"
-                    src="figma.webp"
+                    src="figma.png"
                     alt="figma"
                   />
                 </div>
@@ -102,7 +106,38 @@ function App() {
         </Col>
         <Col className="d-flex justify-content-center">
           <div className="timeline-container">
-            <h2 className="timeline-title">Lets connect</h2>
+            <div style={{ display: "flex" }}>
+              <h2 className="timeline-title">Lets connect</h2>
+              <img src="profile.png" className="profile" />
+            </div>
+
+            <Row>
+              <Col xs={12}>
+                <div style={{ display: "flex" }}>
+                  <img className="connectLogo" src="linkedin.png" alt="figma" />
+                  <a
+                    href="https://www.linkedin.com/in/ashrana1993/"
+                    target="_blank"
+                    style={{ marginTop: "3%" }}
+                    className="white-text connectLogoText"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </Col>
+              <Col xs={12}>
+                <div style={{ display: "flex" }}>
+                  <img className="connectLogo" src="gmail.png" alt="gmail" />
+                  <a
+                    href="mailto:ashrana1993@gmail.com"
+                    style={{ marginTop: "3%" }}
+                    className="white-text connectLogoText"
+                  >
+                    Gmail
+                  </a>
+                </div>
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>
