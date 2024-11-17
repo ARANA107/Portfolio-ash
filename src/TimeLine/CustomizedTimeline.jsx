@@ -80,16 +80,21 @@ export default function CustomizedTimeline() {
   };
 
   return (
-    <Timeline
-      sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }}
-      position="right"
-    >
-      {companies.map((company, idx) => getTimeLineitem(company, idx))}
-    </Timeline>
+    <div className="timeline-container">
+      <h2 className="timeline-title">
+        Experience <span className="years">(07 Years)</span>
+      </h2>
+      <Timeline
+        sx={{
+          [`& .${timelineItemClasses.root}:before`]: {
+            flex: 0,
+            padding: 0,
+          },
+        }}
+        position="right"
+      >
+        {companies.map((company, idx) => getTimeLineitem(company, idx))}
+      </Timeline>
+    </div>
   );
 }

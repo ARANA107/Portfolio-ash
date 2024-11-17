@@ -1,36 +1,13 @@
 import React from "react";
-import "./ScrollingTags.css";
+import ScrollingTagsOne from "./ScrollingTagsOne";
+import ScrollingTagsTwo from "./ScrollingTagsTwo";
 
-const ScrollingTags = () => {
-  const speed = 10000;
-  const arr = ["React", "SpringBoot", "Mongo", "MySql"];
+export const ScrollingTags = () => {
   return (
-    <div className="inner">
-      <div className="wrapper">
-        <section style={{ "--speed": `${speed}ms` }}>
-          {arr.map((item) => (
-            <div style={{ width: "100px" }}>
-              <div className="tag">{item}</div>
-            </div>
-          ))}
-        </section>
-        <section style={{ "--speed": `${speed}ms` }}>
-          {arr.map((item) => (
-            <div style={{ width: "100px" }}>
-              <div className="tag">{item}</div>
-            </div>
-          ))}
-        </section>
-        <section style={{ "--speed": `${speed}ms` }}>
-          {arr.map((item) => (
-            <div style={{ width: "100px" }}>
-              <div className="tag">{item}</div>
-            </div>
-          ))}
-        </section>
-      </div>
+    <div className="timeline-container">
+      <h2 className="timeline-title">Skills and expertise</h2>
+      <ScrollingTagsOne />
+      <ScrollingTagsTwo />
     </div>
   );
 };
-
-export default ScrollingTags;
