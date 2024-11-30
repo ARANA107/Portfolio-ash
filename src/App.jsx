@@ -12,64 +12,60 @@ import LetsConnect from "./LetsConnect/LetsConnect";
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isCursorVisible, setIsCursorVisible] = useState(true);
 
   return (
-    <Container
-      fluid="md"
-      className="cursorHidden top-height"
-      onMouseEnter={() => setIsCursorVisible(true)}
-      onMouseLeave={() => setIsCursorVisible(false)}
-    >
+    <>
       <CustomCursor
-        isCursorVisible={isCursorVisible}
+        isCursorVisible={true}
         setCursorPosition={setCursorPosition}
         cursorPosition={cursorPosition}
       />
-      <Row className="flex-column-reverse flex-md-row">
-        <Col
-          xs={12}
-          md={6}
-          style={{ paddingLeft: "40px", marginBottom: "40px" }}
-          className="justify-content-xs-center text-center text-md-start"
-        >
-          <MainHeading />
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          className="white-text d-flex justify-content-center mb-4"
-        >
-          <MainAnimation />
-        </Col>
-      </Row>
-      <Row className="g-0">
-        <Col xs={12} md={4} className="white-text">
-          <CustomizedTimeline />
-        </Col>
-        <Col
-          xs={12}
-          md={4}
-          className="d-flex justify-content-center mt-4 mt-md-0"
-        >
-          <Row style={{ width: "100%" }}>
-            <Col
-              xs={12}
-              style={{ marginBottom: "10px" }}
-              className="d-flex justify-content-center"
-            >
-              <ScrollingTags />
-            </Col>
-            <Col xs={12} className="d-flex justify-content-center">
-              <TechStack />
-            </Col>
-          </Row>
-        </Col>
-        <Col xs={12} md={4} className="mt-4 mt-md-0">
-          <LetsConnect />
-        </Col>
-      </Row>
-    </Container>
+      <Container fluid="md" className=" top-height">
+        <Row className="flex-column-reverse flex-md-row">
+          <Col
+            xs={12}
+            md={6}
+            style={{ paddingLeft: "40px", marginBottom: "40px" }}
+            className="justify-content-xs-center text-center text-md-start"
+          >
+            <MainHeading />
+          </Col>
+          <Col
+            xs={12}
+            md={6}
+            className="white-text d-flex justify-content-center mb-4"
+          >
+            <MainAnimation />
+          </Col>
+        </Row>
+        <Row className="g-0">
+          <Col xs={12} md={4} className="white-text">
+            <CustomizedTimeline />
+          </Col>
+          <Col
+            xs={12}
+            md={4}
+            className="d-flex justify-content-center mt-4 mt-md-0"
+          >
+            <Row style={{ width: "100%" }}>
+              <Col
+                xs={12}
+                style={{ marginBottom: "10px" }}
+                className="d-flex justify-content-center"
+              >
+                <ScrollingTags />
+              </Col>
+              <Col xs={12} className="d-flex justify-content-center">
+                <TechStack />
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={12} md={4} className="mt-4 mt-md-0">
+            <LetsConnect />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

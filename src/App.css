@@ -16,6 +16,8 @@
 body {
   background-color: black;
   font-family: "Satoshi", sans-serif;
+  cursor: none;
+  height: 100vh;
 }
 
 .top-height {
@@ -27,14 +29,12 @@ body {
 }
 
 .cursorHidden {
-  cursor: none;
   overflow: hidden;
   position: relative;
 }
 .customCursor {
   z-index: 1000;
   position: fixed;
-
   width: 20px; /* Adjust the size as needed */
   height: 20px;
   background: radial-gradient(

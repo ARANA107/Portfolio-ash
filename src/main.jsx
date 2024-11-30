@@ -6,7 +6,7 @@ import "./index.css"; // Optional: Import global styles
 // Render the App component with React 17 style
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App className="cursorHidden customCursor" />
   </React.StrictMode>,
   document.getElementById("root")
 );
