@@ -6,12 +6,6 @@ const LetsConnect = () => {
     <div className="timeline-container">
       <div style={{ display: "flex", alignItems: "center" }}>
         <h2 className="timeline-title">Let's connect</h2>
-        <img
-          src="profile.png"
-          className="profile"
-          alt="profile"
-          style={{ marginLeft: "10px" }}
-        />
       </div>
 
       <Row>
