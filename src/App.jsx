@@ -35,7 +35,11 @@ function App() {
             md={6}
             className="white-text d-flex justify-content-center mb-4"
           >
-            <MainAnimation />
+            <img
+              src="profile.png"
+              alt="profile"
+              style={{ marginTop: "20px", width: "270px", height: "270px" }}
+            />
           </Col>
         </Row>
         <Row className="g-0">
