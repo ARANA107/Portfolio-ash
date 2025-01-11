@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DeleteRoundedIcon from "@material-ui/icons/DeleteRounded";
+import DeleteRounded from "@mui/icons-material/DeleteRounded";
 import { TextField, Button } from "@mui/material";
 
 const NotesApp = () => {
@@ -67,7 +67,7 @@ const NotesApp = () => {
               <span style={{ fontSize: "12px", color: "#555" }}>
                 {note.date}
               </span>
-              <DeleteRoundedIcon
+              <DeleteRounded
                 onClick={() => handleDeleteNote(note.id)}
                 style={{
                   cursor: "pointer",
