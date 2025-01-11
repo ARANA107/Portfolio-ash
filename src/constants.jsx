@@ -3,7 +3,7 @@ export const mainHeading =
 
 export const companies = [
   {
-    name: "J.P. Morgan & Chase",
+    name: "JPMorgan Chase & Co.",
     date: "Apr 2021 - present",
     title: "Senior software developer",
   },

@@ -16,7 +16,6 @@
 body {
   background-color: black;
   font-family: "Satoshi", sans-serif;
-  cursor: none;
   height: 100vh;
 }
 
@@ -28,25 +27,6 @@ body {
   color: white;
 }
 
-.cursorHidden {
-  overflow: hidden;
-  position: relative;
-}
-.customCursor {
-  z-index: 1000;
-  position: fixed;
-  width: 20px; /* Adjust the size as needed */
-  height: 20px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 255, 21, 0.763) 10%,
-    rgba(0, 0, 0, 0.774) 100%
-  );
-  border-radius: 50%; /* Makes it circular */
-  pointer-events: none; /* Ensures it doesn't interfere with other elements */
-  transform: translate(-50%, -50%); /* Centers it on the cursor position */
-  transition: opacity 0.2s ease, transform 0.1s ease; /* Smooth trailing and fade effect */
-}
 .timeline-container {
   background-color: rgba(40, 39, 39, 0.522);
   border-radius: 24px;
