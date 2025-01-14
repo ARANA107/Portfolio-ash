@@ -25,6 +25,26 @@ const Projects = () => {
             <div>Notes App</div>
           </div>
         </Col>
+        <Col xs={1} className="mt-3">
+          <a
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              textDecoration: "none",
+              cursor: "pointer", // Make the div look clickable
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://ashwhiz-nextjs.vercel.app/"}
+          >
+            <img src={"foodies.webp"} width={50} height={50} alt="Notes Icon" />
+            <div>Foodies (next.js)</div>
+          </a>
+        </Col>
         <Col xs={12} className="mt-3">
           <div style={{ display: "flex", alignItems: "center" }}></div>
         </Col>
