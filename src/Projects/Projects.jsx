@@ -9,23 +9,32 @@ const Projects = () => {
         <h2 className="timeline-title">Projects</h2>
       </div>
       <Row>
-        <Col xs={1} className="mt-3">
-          <div
+        <Col xs={12} sm={2} className="mt-3">
+          <a
             style={{
               display: "flex",
               flexDirection: "column",
               textAlign: "center",
               alignItems: "center",
               justifyContent: "center",
-              cursor: "pointer", // Make the div look clickable
+              color: "white",
+              textDecoration: "none",
+              cursor: "pointer",
             }}
-            onClick={() => navigate("/notes-app")}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://commercial-bank.vercel.app/"}
           >
-            <img src={"notes.png"} width={50} height={50} alt="Notes Icon" />
-            <div>Notes App</div>
-          </div>
+            <img
+              src={"p_image.webp"}
+              width={70}
+              height={50}
+              alt="Commercial bank Icon"
+            />
+            <div>Commercial Bank</div>
+          </a>
         </Col>
-        <Col xs={1} className="mt-3">
+        <Col xs={12} sm={2} className="mt-3">
           <a
             style={{
               display: "flex",
@@ -44,6 +53,22 @@ const Projects = () => {
             <img src={"foodies.webp"} width={50} height={50} alt="Notes Icon" />
             <div>Foodies (next.js)</div>
           </a>
+        </Col>
+        <Col xs={12} sm={2} className="mt-3">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer", // Make the div look clickable
+            }}
+            onClick={() => navigate("/notes-app")}
+          >
+            <img src={"notes.png"} width={50} height={50} alt="Notes Icon" />
+            <div>Notes App</div>
+          </div>
         </Col>
         <Col xs={12} className="mt-3">
           <div style={{ display: "flex", alignItems: "center" }}></div>
