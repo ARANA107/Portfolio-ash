@@ -7,6 +7,12 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import { companies } from "./../constants.jsx";
+import "./customTimeline.css";
+
+const openNewTab = (website) => {
+  window.open(website, "_blank", "noopener,noreferrer");
+};
+
 export default function CustomizedTimeline() {
   const getTimeLineitem = (company, itemNum) => {
     if (itemNum === 0) {
@@ -28,7 +34,14 @@ export default function CustomizedTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Typography component="span">{company.name}</Typography>
+              <Typography
+                className="hover-underline"
+                style={{ cursor: "pointer" }}
+                onClick={(_) => openNewTab("https://www.jpmorganchase.com/")}
+                component="span"
+              >
+                {company.name}
+              </Typography>
               <Typography
                 style={{ color: "grey", fontSize: "14px" }}
                 color="textSecondary"
@@ -54,7 +67,23 @@ export default function CustomizedTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Typography component="span">{company.name}</Typography>
+              <Typography
+                className="hover-underline"
+                style={{ cursor: "pointer" }}
+                onClick={(_) => {
+                  if (
+                    company.name === "Infosys (Apple)" ||
+                    company.name === "Infosys (Verizon)"
+                  ) {
+                    openNewTab("https://www.infosys.com/");
+                  } else {
+                    openNewTab("https://www.romanoatlaw.com/");
+                  }
+                }}
+                component="span"
+              >
+                {company.name}
+              </Typography>
               <Typography
                 style={{
                   color: "grey",
